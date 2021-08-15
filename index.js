@@ -38,7 +38,7 @@ console.log(res);
 
 let valMonths=prompt('Введите номер месяца');
 let partOfYear;
-if (valMonths>=1&&valMonths<=2){
+if (valMonths==1&&valMonths==2||valMonths==12){
     partOfYear='зима';
 }   else if(valMonths>=3&&valMonths<=5){
     partOfYear='весна';
@@ -46,8 +46,8 @@ if (valMonths>=1&&valMonths<=2){
     partOfYear='лето';
 }   else if(valMonths>=9&&valMonths<=11){
     partOfYear='осень';
-}   else if(valMonths=12){
-    partOfYear='зима';
+}   else{
+    partOfYear='Такого месяца нет';
 }
 console.log(`Время года - ${partOfYear}`);
 
@@ -77,3 +77,13 @@ if(sum>=500&&sum<800){
 
 //Определите к внешней или к внутренней части круга принадлежит введенная пользователем точка с координатами (x, y) если уравнение окружности в центре координат (0,0) будет x^2 + y^2 = r^2. Значение радиуса и координаты точки задаёт пользователь.
 //Примечание : значком ^ отмечена степень числа.
+let x=prompt('координаты Х')
+let y=prompt('координаты Y')
+let z=prompt('радиус круга')
+let r2=(x*x+y*y)
+if (r2>r1**2){
+    console.log('точка принадлежить внешней части круга')
+}   else{
+    console.log('точка принадлежить внутренней части круга')
+}
+
