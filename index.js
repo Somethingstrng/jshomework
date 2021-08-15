@@ -77,13 +77,106 @@ if(sum>=500&&sum<800){
 
 //Определите к внешней или к внутренней части круга принадлежит введенная пользователем точка с координатами (x, y) если уравнение окружности в центре координат (0,0) будет x^2 + y^2 = r^2. Значение радиуса и координаты точки задаёт пользователь.
 //Примечание : значком ^ отмечена степень числа.
-let x=prompt('координаты Х')
-let y=prompt('координаты Y')
-let z=prompt('радиус круга')
-let r2=(x*x+y*y)
+let x=prompt('координаты Х');
+let y=prompt('координаты Y');
+let z=prompt('радиус круга');
+let r2=(x*x+y*y);
 if (r2>r1**2){
-    console.log('точка принадлежить внешней части круга')
+    console.log('точка принадлежить внешней части круга');
 }   else{
-    console.log('точка принадлежить внутренней части круга')
+    console.log('точка принадлежить внутренней части круга');
 }
 
+//циклы if while
+let n=5, i=1;
+while(i<=n){
+    console.log('*')
+    i=i+1;
+}
+while(n>0){
+    console.log('*');
+    n--;
+}
+let n=10, i=1;
+while(i<=10){
+    console.log(i)
+    i++
+}
+//нечетные
+let i=1,n=10;
+while(i<=n){
+    console.log(i);
+    i=i+2;
+}
+let i=2,n=10;
+while(i<=n){
+    console.log(i);
+    i=i+2;
+}
+let i=0,n=30;
+while(i<=n){
+    console.log(i);
+    i=i+5;
+}
+
+let result=0;
+i=1;
+n=10;
+while(i<=n){
+    result+=i;
+    i++;
+}
+/*i=1;
+1<=10? result+=1;
+i=2;
+2<=10? result+=2;
+...
+i=11;
+11<=10? exit;*/
+let i=1, n=10;
+result=1;
+while(i<=n){
+    result=result*i;
+    i++;
+}
+console.log(result);
+
+i = 1;
+n = 10;
+result = 1;
+while(i <= n){
+    result = result * i;
+    i = i + 2;
+}
+console.log(result);
+
+i = 1;
+n = 10;
+result = 0;
+do{
+    result = result + i;
+    i = i + 1;
+}   while(i<=n);
+console.log(result);
+//i=1 do: result=result+1=1, 1=1+1=2 while(2<=10)
+//i=2 do: result=1+2=3, 1=2+1=3 while(3<=10)
+
+//вычислить сумму нечетных чисел от 1 до 30
+let num=1/*start*/, n=30/*end*/;
+result=0;
+while(num<=n){
+    result+=num;
+    num+=2;
+}
+console.log(result);
+
+//вывести первых 5 значений степени 2
+//оператор **, счетчик i отвечает за кол-во операций(5)
+result=1;
+i=1;
+n=5;
+while(i<=5){
+    result=2**i;
+    console.log(2**i);
+    i++
+}
