@@ -173,10 +173,331 @@ console.log(result);
 //вывести первых 5 значений степени 2
 //оператор **, счетчик i отвечает за кол-во операций(5)
 result=1;
-i=1;
-n=5;
-while(i<=5){
+(i=1), (n=5);
+while(i<=n){
     result=2**i;
-    console.log(2**i);
+    console.log(result);
     i++
 }
+//или
+result=1;
+(i=1), (n=5);
+while(i<=n){
+    result=result*2;
+    console.log(result);
+    i++
+}
+
+//вывести первые 5 значений степени 8
+result=1;
+(i=1), (n=5);
+while(i<=n){
+    result=result*8;
+    console.log(result);
+    i++
+}
+
+//спросить у пользователя общеизвестный факт и проверить, правильный ответ или нет
+let userAnswer, rightAnswer, i, n;
+userAnswer=prompt('2+2=?');
+rightAnswer=4;
+i=1;
+n=3;
+if(userAnswer==rightAnswer){
+    console.log('Cool!');
+}   else{
+    console.log('Wrong! Try again!');
+} do{
+    userAnswer=prompt('2+2=?');
+    i = i + 1;
+}   while(i<=n);
+
+let userAnswer, rightAnswer, i, n;
+userAnswer=prompt('2+2=?');
+rightAnswer=4;
+if(userAnswer==rightAnswer){
+    console.log('Cool!');
+}   else{
+    userAnswer=prompt('2+2=?');
+    if(userAnswer==rightAnswer){
+        console.log('Cool!');
+    }   else{
+        userAnswer=prompt('2+2=?');
+        if(userAnswer==rightAnswer){
+        console.log('Cool!');
+        }   else{
+            console.log('Wrong!');
+        }
+    }
+}
+
+let userAnswer, rightAnswer, i, n;
+rightAnswer=4;
+i=1;
+while(i<=3){
+    userAnswer=prompt('2+2=?');
+    if (userAnswer==rightAnswer){
+    console.log('Cool!');
+    break; //выход и прекращение цикла
+    }   else{
+        console.log('Wrong!');
+    }
+    i++
+}
+//--
+let userAnswer, rightAnswer, i, n;
+rightAnswer=4;
+i=1;
+while(i<=99999){
+    userAnswer=prompt('2+2=?');
+    if (userAnswer==rightAnswer){
+    console.log('Cool!');
+    break; //выход и прекращение цикла
+    }   else{
+        console.log('Wrong!');
+    }
+    i++
+}
+
+let userAnswer, rightAnswer, i, n;
+userAnswer=prompt('2+2=?');
+rightAnswer=4;
+while(userAnswer!=rightAnswer){
+    console.log('Wrong!');
+    userAnswer=prompt('2+2=?');
+}
+console.log('Yes!')
+
+let userAnswer, rightAnswer, i, n;
+userAnswer=prompt('2+2=?');
+rightAnswer=4;
+i=1;
+n=3;
+if(userAnswer==rightAnswer){
+    console.log('Cool!');
+}   else{
+    console.log('Wrong! Try again!');
+} do{
+    userAnswer=prompt('2+2=?');
+}   while(userAnswer!=rightAnswer){
+    console.log('Yes!')
+}
+
+//while(true){
+//    console.log('*');
+//} вечный цикл
+
+let userAnswer, rightAnswer;
+rightAnswer=4;
+while(true){
+    userAnswer=prompt('2+2=?');
+    if(userAnswer==rightAnswer){
+        console.log('Yes!');
+        break;
+    }   else{
+        console.log('No!');
+    }
+}
+
+let userAnswer, rightAnswer;
+rightAnswer=4;
+while(true){
+    userAnswer=prompt('2+2=?');
+    if(userAnswer==rightAnswer){
+        console.log('Yes!');
+        break;
+    }   console.log('No!');
+}
+
+let userAnswer, rightAnswer;
+rightAnswer=4;
+while(true){
+    userAnswer=prompt('2+2=?');
+    if(userAnswer!=rightAnswer){
+        console.log('No!');
+        continue;
+    }   console.log('Yes!');
+    break;
+}
+
+//диапазон
+//таблица значений для функции y=-3x^2+5-2 для значений х от -2 до 2 с шагом 0,5
+let x=-2, limitX=2, step=0.5, y;
+while(x<=limitX){
+    y=-3*x*x+5*x-2;
+    console.log('x=',x, 'y=',y);
+    x+=step;
+}
+
+//цикл for
+//from 1 to 10
+
+let n=10;
+for(i=1;i<=10;i++){
+    console.log(i);
+}
+//нечетные числа
+let n=10;
+for(i=1;i<=10;i=i+2){
+    console.log(i);
+}
+
+let n=10;
+for(i=2;i<=10;i=i+2){
+    console.log(i);
+}
+//сумма чисел от 1 до 100
+n=100;
+result=0;
+for(num=1;num<=n;num++){
+    result+=num;
+}
+console.log(result)
+
+//for (;;){} бесконечный цикл аналог while но нужно не забыть о break
+
+//таблица умножения на 2 через вайл и фор
+//таблица умножения  фор
+
+n=10;
+let base=2;
+for(i=1;i<=10;i++){
+    result=base*i;
+    console.log(result);
+}
+
+n=10;
+let base=2;
+i=1;
+while(i<=n){
+    result=base*i;
+    console.log(result);
+    i++;
+}
+
+//
+base=2;
+for(i=1;i<=10;i++){
+    result=base*i;
+    console.log(result);
+}
+base=3;
+for(i=1;i<=10;i++){
+    result=base*i;
+    console.log(result);
+}
+base=4;
+for(i=1;i<=10;i++){
+    result=base*i;
+    console.log(`${base} * ${i} = ${result}`);
+}
+//
+let startYear, endYear, isLeapYear=false;
+startYear=2021;
+endYear=2050;
+for(i=startYear;i<=endYear;i++){
+    if(i%4==0){
+    console.log(i);
+    isLeapYear=true;
+    }
+}
+if (isLeapYear==false){
+    console.log('No!');
+}
+//количество високостных годов
+let startYear, endYear, countLeapYear=0;
+startYear=2021;
+endYear=2050;
+for(i=startYear;i<=endYear;i++){
+    if(i%4==0){
+    console.log(i);
+    countLeapYear++;
+    }
+}
+console.log(countLeapYear);
+
+//условие if-else{} альтернатива, выбор, условие задачи
+//циклы for, while, do-while действие повторяется какое-то кол-во раз или постоянно и есть шаг изменений
+//function название (список параметров){тело функции}
+function printStars(countYourStars){
+    //этот кусок видит только эта функция, их не видит основная программа
+    while(countYourStars>0){
+        console.log('*');
+        countYourStars--;
+    }
+}
+printStars(2);
+printStars(50);
+
+function sumNum(n){
+    let result=0, num;
+    for(num=1;num<=n;num++){
+        result+=num;
+    }
+    return result;//возврат значения
+}
+let res;
+res=sumNum(10);
+console.log('sum from 1 to 10 is', res)
+
+function sumNum2(limit1, limit2){
+    let result=0, num;
+    for(num=limit1;num<=limit2;num++){
+        result+=num;
+    }
+    return result;//возврат значения
+}
+res=sumNum2(10,15);
+console.log(res);
+
+function sumNum2(limit1, limit2){
+    let result=1, num;
+    for(num=limit1;num<=limit2;num++){
+        result*=num;
+    }
+    return result;//возврат значения
+}
+res=sumNum2(10,15);
+console.log(res);
+
+//високостные
+function leapYearFunc (startYear, endYear){
+    let isLeapYear=false;
+    for(i=startYear;i<=endYear;i++){
+        if(i%4==0){
+            console.log(i);
+            isLeapYear=true;
+        }
+    }
+    if(isLeapYear==false){
+        console.log('No!')
+    }
+}
+leapYearFunc(2021,2050);
+
+function leapYearFunc2 (startYear, endYear){
+    let countLeapYear=0, i;
+    for(i=startYear;i<=endYear;i++){
+        if(i%4==0){
+            console.log(i);
+            countLeapYear++;
+        }
+    }
+    if(countLeapYear==0){
+        console.log('No!')
+    }
+    return countLeapYear;
+}
+res = leapYearFunc2(2021,2050);
+console.log(res);
+
+//значения по умолчанию для функции - дефолтные параметры, их задают в конец
+
+function sumNum3(limit2, limit1=1){
+    let result=0, num;
+    for(num=limit1;num<=limit2;num++){
+        result+=num;
+    }
+    return result;//возврат значения
+}
+console.log(sumNum3(1,10));
